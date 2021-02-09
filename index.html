@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="w-1/2 mx-auto">
+      <div class="mb-10">
+        <p class="mr-2 mb-2 mt-2 text-2xl">
+          <span class="p-1 border-b-2 border-yellow-600">TECHNOLOGIES</span>
+        </p>
+      </div>
+      <div class="tab-left tab border-onepix border-gray-500 outline-none">
+        <button
+          class="outline-none tablinks text-white"
+          onclick="openCity(event, 'first')"
+          id="defaultOpen"
+        >
+          first
+        </button>
+        <button
+          class="outline-none tablinks"
+          onclick="openCity(event, 'second')"
+        >
+          second
+        </button>
+        <button
+          class="outline-none tablinks"
+          onclick="openCity(event, 'third')"
+        >
+          third
+        </button>
+      </div>
+      <div class="">
+        <div id="first" class="tabcontent">
+          <p class="mr-2 mb-2 mt-2 text-2xl">
+            <span class="p-1 m-2 border-b-2 border-yellow-600">First</span>
+          </p>
+          <div class="flex">
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/salesforce.svg"
+                alt="salesforce"
+              />
+            </a>
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/front-end/html.svg"
+                alt="salesforce"
+              />
+            </a>
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/cms/drupal-logo.svg"
+                alt="salesforce"
+              />
+            </a>
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/platforms/dynamics-365-logo.svg"
+                alt="salesforce"
+              />
+            </a>
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/zendesk.svg"
+                alt="salesforce"
+              />
+            </a>
+          </div>
+        </div>
+        <div id="second" class="tabcontent">
+          <p class="mr-2 mb-2 mt-2 text-2xl">
+            <span class="p-1 m-2 border-b-2 border-yellow-600">Second</span>
+          </p>
+          <div class="flex">
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/salesforce.svg"
+                alt="salesforce"
+              /> </a
+            ><a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/salesforce.svg"
+                alt="salesforce"
+              />
+            </a>
+          </div>
+        </div>
+        <div id="third" class="tabcontent">
+          <p class="mr-2 mb-2 mt-2 text-2xl">
+            <span class="p-1 m-2 border-b-2 border-yellow-600">Third</span>
+          </p>
+          <div class="flex">
+            <a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/salesforce.svg"
+                alt="salesforce"
+              /> </a
+            ><a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/salesforce.svg"
+                alt="salesforce"
+              /> </a
+            ><a
+              href="#"
+              class="flex m-2 border-solid border-2 border-light-blue-500 p-3"
+            >
+              <img
+                class="widthImg object-contain items-center"
+                src="https://www.scnsoft.com/technologies-logos/crm/salesforce.svg"
+                alt="salesforce"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
